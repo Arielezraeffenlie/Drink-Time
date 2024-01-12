@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 11, 2024 at 04:35 AM
+-- Generation Time: Jan 12, 2024 at 04:49 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -42,16 +42,7 @@ CREATE TABLE `dtrans` (
 --
 
 INSERT INTO `dtrans` (`id`, `id_htrans`, `id_menu`, `qty`, `harga`) VALUES
-(0, 8, 2, 1, 10000),
-(0, 9, 2, 1, 10000),
-(0, 10, 2, 1, 10000),
-(0, 11, 2, 1, 10000),
-(0, 12, 2, 1, 10000),
-(0, 13, 2, 1, 10000),
-(0, 14, 2, 1, 10000),
-(0, 15, 2, 1, 10000),
-(0, 16, 2, 1, 10000),
-(0, 17, 2, 1, 10000);
+(0, 29, 2, 1, 10000);
 
 -- --------------------------------------------------------
 
@@ -77,22 +68,8 @@ CREATE TABLE `htrans` (
 --
 
 INSERT INTO `htrans` (`id`, `tanggal`, `username`, `nama_penerima`, `kota_pengirim`, `alamat_pengirim`, `no_telepon_pengirim`, `jenis_pembayaran`, `grandtotal`, `status`) VALUES
-(1, '2023-12-26', 'adi', 'adi', 'surabaya', 'ngagel jaya tengah', 98021938, 'ovo', 12000, 'terkirim'),
-(3, '2024-01-10', 'ariel', 'adi', 'surabaya', 'ngagel jaya tengah', 239480293, 'gopay', 20000, 'ditolak'),
-(4, '2024-01-10', 'ariel', NULL, 'Surabaya', 'asdada', 123231, 'volvo', 0, 'pemesanan'),
-(5, '2024-01-10', 'ariel', NULL, 'Surabaya', 'asdada', 9901823, 'volvo', 0, 'pemesanan'),
-(6, '2024-01-10', 'ariel', NULL, 'Surabaya', 'asdada', 9901823, 'volvo', 0, 'pemesanan'),
-(7, '2024-01-10', 'ariel', NULL, 'Surabaya', 'asdada', 9901823, 'volvo', 0, 'pemesanan'),
-(8, '2024-01-10', 'ariel', NULL, 'Surabaya', 'asdada', 9901823, 'volvo', 10000, 'pemesanan'),
-(9, '2024-01-10', 'ariel', NULL, 'Surabaya', 'asdada', 9901823, 'volvo', 10000, 'pemesanan'),
-(10, '2024-01-10', 'ariel', NULL, 'Surabaya', 'asdada', 9901823, 'volvo', 10000, 'pemesanan'),
-(11, '2024-01-10', 'ariel', NULL, 'Surabaya', 'asdada', 9901823, 'volvo', 10000, 'pemesanan'),
-(12, '2024-01-10', 'ariel', NULL, 'Surabaya', 'asdada', 9901823, 'volvo', 10000, 'pemesanan'),
-(13, '2024-01-10', 'ariel', NULL, 'Surabaya', 'asdada', 9901823, 'volvo', 10000, 'pemesanan'),
-(14, '2024-01-10', 'ariel', NULL, 'Surabaya', 'asdada', 9901823, 'volvo', 10000, 'pemesanan'),
-(15, '2024-01-10', 'ariel', NULL, 'Surabaya', 'asdada', 9901823, 'volvo', 10000, 'pemesanan'),
-(16, '2024-01-10', 'ariel', NULL, 'Surabaya', 'asdada', 9901823, 'volvo', 10000, 'pemesanan'),
-(17, '2024-01-10', 'master', NULL, 'Surabaya', 'asdadsads', 129103, 'volvo', 10000, 'pemesanan');
+(29, '2024-01-12', 'ariel', NULL, 'Surabaya', 'asdada', 9901823, 'volvo', 10000, 'terkirim'),
+(30, '2024-01-12', 'ariel', NULL, 'Surabaya', 'asdada', 9901823, 'volvo', 0, 'ditolak');
 
 -- --------------------------------------------------------
 
@@ -164,7 +141,8 @@ INSERT INTO `menu` (`id_menu`, `nama_menu`, `id_jenis`, `foto`, `harga`, `flagju
 (28, 'Apple Frui‑Tea', '1', 'Apple Fruit Tea.webp', 30000, 1, 'Kombinasi lezat dari rasa apel yang renyah, juicy & asam', 'Aktif'),
 (29, 'Taichi Supreme Milk Tea', '1', 'Taichi Supreme Milk Tea.webp', 40000, 1, 'Teh susu krim dan memanjakan yang disertai dengan mutiara tapioka hitam dan mutiara konjak (putih)', 'Aktif'),
 (30, 'Assam', '1', 'Assam.png', 20000, 1, 'Teh hitam yang populer di seluruh dunia. Teh Assam kami adalah rasa yang kaya dan bertubuh penuh dengan nada malty, bersahaja, dan pedas', 'Aktif'),
-(31, 'Watermelon Cha‑rge', '1', 'Watermelon Cha rge.png', 35000, 1, 'A unique and invigorating variation of bubble tea that combines the refreshing taste of watermelon with energy-boosting Red Bull', 'Aktif');
+(31, 'Watermelon Cha‑rge', '1', 'Watermelon Cha rge.png', 35000, 1, 'A unique and invigorating variation of bubble tea that combines the refreshing taste of watermelon with energy-boosting Red Bull', 'Aktif'),
+(33, 'es teh', '1', 'es teh.jpg', 2000, 1, 'minuman teh', 'aktif');
 
 -- --------------------------------------------------------
 
@@ -193,6 +171,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`Username`, `password`, `email`, `Nama`, `Alamat`, `Kota`, `telp`, `tgllahir`, `tgljoin`, `role`, `status`, `updated_at`, `created_at`) VALUES
+('a', '$2y$10$Rgzazag3WN23ymvOZC5VEuXOmpla.YAGnzgcPkqXDY3QfTrBDVoF6', 'a@gmail.com', 'a', 'asdada', 'Surabaya', '1232313', '2312-12-31', '2024-01-11', 'User', 'Aktif', '2024-01-11', '2024-01-11'),
 ('ariel', '$2y$10$UziLSG7der021d72EnkaI.enivOuADxuZ6NFYVa0sCGOFAUOlqdtK', 'ariel.e21@mhs.istts.ac.id', 'Ariel Ezra', 'asdada', 'Surabaya', '9901823', '3322-12-12', '2024-01-04', 'User', 'Aktif', '2024-01-04', '2024-01-04'),
 ('master', '$2y$10$KN.FzOeeAU526bHcrakpAuye7dLNTc3uHRdvAfDsxxFx9uDln6yyu', 'Master@gmail.com', 'Master', 'asdadsads', 'Surabaya', '0129103', '2332-12-21', '2024-01-03', 'Admin', 'Aktif', '2024-01-03', '2024-01-03');
 
@@ -238,19 +217,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `htrans`
 --
 ALTER TABLE `htrans`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `jenis`
 --
 ALTER TABLE `jenis`
-  MODIFY `Id_jenis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Id_jenis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id_menu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id_menu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
